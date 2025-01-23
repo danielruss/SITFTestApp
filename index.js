@@ -57,4 +57,11 @@ document.getElementById("runButton").addEventListener("click", async () => {
     console.log("text ===> ", text)
 })
 
+document.getElementById("clearAPIRootButton").addEventListener("click", async () => {
+    cached_apiroot = ""
+    api_url = "";
+    await cache.setItem("apiroot", cached_apiroot)
+    updateDisplay()
+})
+
 console.log("... finished index.js ...")

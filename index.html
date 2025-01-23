@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SOCcer in the field test application</title>
+    <script type="module" src="index.js"></script>
+</head>
+
+<body>
+    <div id="apidiv" data-noroot>
+        <label for="apiroot">Set the apiroot</label>
+        <input type="text" id="apiroot"><input type="button" id="apirootButton" value="set apiroot">
+    </div>
+
+    <div id="examplediv">
+        <form>
+            <label for="JobTitle"><br>Job Title: </label>
+            <input id="JobTitle" type="text">
+            <label for="JobTask"><br>Job Task: </label>
+            <input id="JobTask" type="text">
+            <label for="nCodes"><br>Number of codes to return: </label>
+            <input id="nCodes" type="number" min="1" max="840" value="4"> <br><input type="button" id="runButton"
+                value="run api">
+        </form>
+        <div><br>
+            <pre id="json_out"></pre>
+            To run this example from the command line:<br>
+            <code>curl -X GET <span id="apiurl"></span> -H "accept: application/json"</code>
+        </div>
+    </div>
+
+</body>
+
+</html>
